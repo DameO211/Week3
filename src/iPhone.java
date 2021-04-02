@@ -1,14 +1,14 @@
 public class iPhone {
     private int iOS;
     private int model;
-    private double price;
+    private int battery;
 
 
 
-    public iPhone(int iOS,int model,double price){
+    public iPhone(int iOS,int model,int battery){
         this.iOS = iOS;
         this.model = model;
-        this.price = price;
+        this.battery = battery;
     }
 
     /*
@@ -23,6 +23,15 @@ public class iPhone {
     * */
 
 
+    boolean power(boolean on_off){
+        if (battery == 0) {
+            return on_off = false;
+        }else
+        {
+            on_off = true;
+        }
+        return on_off;
+    }
 
 
     public int getiOS() {
@@ -31,8 +40,8 @@ public class iPhone {
     public int getModel() {
         return model;
     }
-    public double getPrice() {
-        return price;
+    public double getbattery() {
+        return battery;
     }
 
 
@@ -42,10 +51,17 @@ public class iPhone {
     public void setModel(int model) {
         this.model = model;
     }
-    public void setPrice(double price) {
-        this.price = price;
+    public void setBattery(int battery) {
+        this.battery = battery;
     }
 
-
+    @Override
+    public String toString() {
+        return "iPhone{" +
+                "iOS=" + iOS +
+                ", model=" + model +
+                ", battery=" + battery +
+                '}';
+    }
 }
 
