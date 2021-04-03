@@ -21,5 +21,8 @@ public class iPhonePro extends iPhone {
         return cameraPixels;
     }
 
-
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

@@ -1,21 +1,27 @@
-import kotlin.Pair;
-
 import java.util.Scanner;
 
 public class iPhoneProMAX extends iPhone {
-    private boolean screenSize = false;
+    private int screenSize = 0;
 
-    public iPhoneProMAX(int iOS, int model, int battery) {
+    public iPhoneProMAX(int iOS, int model, int battery, int screenSize) {
         super(iOS, model, battery);
         this.screenSize = screenSize;
     }
 
-    public boolean isScreenSize() {
+    public int isScreenSize() {
         return screenSize;
     }
 
-    public void setScreenSize(boolean screenSize) {
-        int screenOrientation = 0;
+    public int getScreenSize() {
+        int screenSize = this.screenSize;
+        return screenSize;
+    }
+
+    public void setScreenSize() {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("What size is the screen? ");
+        int screenOrientation = scan.nextInt();
         if (screenOrientation <= 50){
             System.out.println("Screen orientation: Portrait ");
         }
@@ -24,6 +30,11 @@ public class iPhoneProMAX extends iPhone {
         }
 
         this.screenSize = screenSize;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+ "Screen size: "+this.screenSize;
     }
 }
 

@@ -11,26 +11,14 @@ public class iPhone {
         this.battery = battery;
     }
 
-    /*
-    * Create a Java class with two subclasses (children).
-    * Each class should have at least one attribute and a method.
 
-    * Parent class should have attribute/method that is common to both children
-    * and children should have attribute/method that is unique to what they represent.
-    * Write main method to demonstrate the correct functionality of the code and to
-    * demonstrate that the children inherit from the parent class.
-     *
-    * */
-
-
+    //power method used to determine if phone is on or off
     boolean power(boolean on_off){
+        on_off = false;
         if (battery == 0) {
             return on_off = false;
-        }else
-        {
-            on_off = true;
         }
-        return on_off;
+        return true;
     }
 
 
